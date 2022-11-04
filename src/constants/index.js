@@ -11,3 +11,9 @@ export const languageColors = {
     Java: "#b07219",
     PHP: "#4F5D95"
 };
+
+export const themes = [
+    "Default",
+    "Light",
+    "Dark"
+];

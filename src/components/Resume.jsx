@@ -18,7 +18,7 @@ const Resume = () => {
                             src={data?.avatar_url}
                             alt=""
                         />
-                    ) : <div className="h-full bg-gray-100"/>}
+                    ) : <div className="h-full bg-gray-100 rounded-full"/>}
                 </div>
             )}
 
