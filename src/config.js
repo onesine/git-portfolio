@@ -116,7 +116,7 @@ const config = {
             },
             {
                 image: "git-profile.png",
-                link: "https://git-profile-ten.vercel.app/",
+                link: "https://git-profile-red.vercel.app/",
                 title: "Git Profile",
                 description: "This project presents some data from my GitHub and some project you can try.",
                 date: "1 days ago",

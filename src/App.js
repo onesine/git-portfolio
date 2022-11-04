@@ -4,11 +4,12 @@ import Contact from "./components/Contact";
 import TechStack from "./components/TechStack";
 import ChangeTheme from "./components/ChangeTheme";
 import Experience from "./components/Experience";
-import {CardTitle} from "./components/utils";
+import {CardTitle, ProjectsContainer} from "./components/utils";
 import Project from "./components/Project";
 import TryProjects from "./components/TryProjects";
 import {useFetchData} from "./hooks";
 import {SkeletonProject} from "./components/SkeletonProject";
+import Footer from "./components/Footer";
 
 const App = () => {
     const {profile} = config;
@@ -38,7 +39,7 @@ const App = () => {
                 </div>
 
                 <div className="w-full lg:w-4/6 space-y-6">
-                    <div className="shadow-sm border bg-zinc-100 rounded-md p-4">
+                    <ProjectsContainer>
                         <div className="flex items-center justify-between">
                             <CardTitle>My Projects</CardTitle>
                             <a href={ profile?.username ? `https://github.com/${profile?.username}?tab=repositories` : "#repositories" } target="_blank" rel="noreferrer" className="text-sm text-gray-400">
@@ -61,9 +62,9 @@ const App = () => {
                                 </>
                             )}
                         </div>
-                    </div>
+                    </ProjectsContainer>
 
-                    <div className="shadow-sm border bg-zinc-100 rounded-md p-4">
+                    <ProjectsContainer>
                         <CardTitle>A recent project that can be tested</CardTitle>
 
                         <div className="space-y-6">
@@ -71,15 +72,11 @@ const App = () => {
                                 <TryProjects key={index} data={item}/>
                             ))}
                         </div>
-                    </div>
+                    </ProjectsContainer>
                 </div>
             </div>
 
-            <div className="flex items-center justify-center pb-7">
-                <div className="border bg-white px-4 py-3 text-sm border border-gray-300 rounded-md shadow-lg">
-                    Made with <span className="text-indigo-600">GitProfile</span> and <span>❤️</span>
-                </div>
-            </div>
+            <Footer/>
         </div>
     );
 };

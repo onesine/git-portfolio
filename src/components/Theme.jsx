@@ -1,8 +1,10 @@
-import {createContext, useMemo, useState} from "react";
+import {createContext, useEffect, useLayoutEffect, useMemo, useState} from "react";
 import {themes} from "../constants";
+import themeConfig from "../config/theme";
+import {getTheme} from "../helpers";
 
 export const ThemeContext = createContext({
-    choice: "default",
+    theme: "Default",
     themes: themes,
     changeTheme: (theme) => {}
 });
@@ -10,9 +12,14 @@ export const ThemeContext = createContext({
 const Theme = ({children}) => {
     const [theme, setTheme] = useState(themes[0]);
 
+    useLayoutEffect(() => {
+        const defaultValue = getTheme(theme);
+        document.body.className = defaultValue in themeConfig ? themeConfig[defaultValue]["body"] : themeConfig[theme[0]];
+    }, [theme]);
+
     const value = useMemo(() => {
         return {
-            choice: theme,
+            theme,
             themes: themes,
             changeTheme: (choice) => {setTheme(choice)}
         }

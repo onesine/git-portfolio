@@ -5,7 +5,7 @@ import {getLanguageColors} from "../helpers";
 const Project = ({data}) => {
     return (
         <CardContainer>
-            <a href={data?.html_url} target="_blank" rel="noreferrer" className="h-full flex flex-col justify-between block p-7 text-gray-500">
+            <a href={data?.html_url} target="_blank" rel="noreferrer" className="h-full flex flex-col justify-between block p-7">
                 <div>
                     <div className="flex items-center space-x-2">
                         <FolderIcon className="h-5 w-5"/>
