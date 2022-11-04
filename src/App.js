@@ -64,7 +64,7 @@ const App = () => {
                     </div>
 
                     <div className="shadow-sm border bg-zinc-100 rounded-md p-4">
-                        <CardTitle>Recent Posts</CardTitle>
+                        <CardTitle>A recent project that can be tested</CardTitle>
 
                         <div className="space-y-6">
                             {profile.tryProjects.map((item, index) => (

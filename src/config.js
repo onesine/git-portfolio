@@ -89,7 +89,7 @@ const config = {
             },
             {
                 period: "July 2019 - September 2019",
-                position: "Full-stack | Internship",
+                position: "Full-stack Developer | Internship",
                 institution: "DMD SARL"
             },
         ],
