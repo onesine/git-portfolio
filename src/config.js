@@ -115,7 +115,7 @@ const config = {
                 techStack: ["HTML", "JavaScript", "React", "Bootstrap 4"]
             },
             {
-                image: null,
+                image: "git-profile.png",
                 link: "https://git-profile-ten.vercel.app/",
                 title: "Git Profile",
                 description: "This project presents some data from my GitHub and some project you can try.",
