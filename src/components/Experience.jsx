@@ -1,5 +1,4 @@
 import {CardContainer, CardTitle} from "./utils";
-import config from "../config";
 
 const Experience = ({title, data}) => {
     return (

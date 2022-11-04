@@ -106,7 +106,48 @@ const config = {
                 institution: "Institution Name"
             },
         ],
-        testProject: [1, 2, 3, 4]
+        tryProjects: [
+            {
+                image: "inventor-app.png",
+                link: "http://45.134.226.100/",
+                title: "Inventor app",
+                description: "This project is a property management application for businesses.",
+                date: "Still in development",
+                techStack: ["HTML", "JavaScript", "React", "Bootstrap 4"]
+            },
+            {
+                image: null,
+                link: "https://git-profile-ten.vercel.app/",
+                title: "Git Profile",
+                description: "This project presents some data from my GitHub and some project you can try.",
+                date: "1 days ago",
+                techStack: ["JavaScript", "React", "HTML", "Tailwindcss"]
+            },
+            {
+                image: "react-headless-accordion.png",
+                link: "https://react-nested-accordion.vercel.app/",
+                title: "Example usage react-headless-accordion",
+                description: "This project presents some use cases of my react-headless-accordion package.",
+                date: "5 days ago",
+                techStack: ["JavaScript", "React", "HTML", "Tailwindcss"]
+            },
+            {
+                image: "react-tailwindcss-select.png",
+                link: "https://demo-react-tailwindcss-select.vercel.app/",
+                title: "Demo of react-tailwindcss-select",
+                description: "This project allows you to test the different options available in my react-tailwindcss-select package.",
+                date: "3 months ago",
+                techStack: ["JavaScript", "React", "HTML", "Tailwindcss"]
+            },
+            {
+                image: "satis-backoffice.png",
+                link: "https://backoffice.satis-universe.com/",
+                title: "Satis backoffice",
+                description: "This project is a client survey application for microfinance institutions..",
+                date: "5 months ago",
+                techStack: ["HTML", "JavaScript", "React", "PHP", "Laravel", "Tailwindcss"]
+            },
+        ]
     }
 };
 

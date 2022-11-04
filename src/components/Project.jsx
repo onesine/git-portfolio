@@ -3,18 +3,19 @@ import {CardContainer, MergeIcon} from "./utils";
 import {getLanguageColors} from "../helpers";
 
 const Project = ({data}) => {
-    console.log("data:", data)
     return (
         <CardContainer>
-            <a href={data?.url} target="_blank" rel="noreferrer" className="block p-7 text-gray-500">
-                <div className="flex items-center space-x-2">
-                    <FolderIcon className="h-5 w-5"/>
-                    <h4 className="text-lg font-semibold">{data?.name}</h4>
+            <a href={data?.html_url} target="_blank" rel="noreferrer" className="h-full flex flex-col justify-between block p-7 text-gray-500">
+                <div>
+                    <div className="flex items-center space-x-2">
+                        <FolderIcon className="h-5 w-5"/>
+                        <h4 className="text-lg font-semibold">{data?.name}</h4>
+                    </div>
+
+                    <p className="text-sm mt-2">{data?.description}</p>
                 </div>
 
-                <p className="text-sm mt-2 mb-5">{data?.description}</p>
-
-                <div className="flex items-center justify-between text-sm">
+                <div className="flex items-center justify-between text-sm mt-5">
                     <div className="flex items-center space-x-3">
                         <div className="flex items-center space-x-0.5">
                             <StarIcon className="h-4 w-4"/>
