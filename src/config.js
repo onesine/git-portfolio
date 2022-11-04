@@ -6,7 +6,6 @@ const config = {
     profile: {
         author: "",
         username: "onesine",
-        repositories: "https://github.com/onesine?tab=repositories",
         contact: [
             {
                 link: null,
@@ -84,26 +83,26 @@ const config = {
         techStack: ["PHP", "Laravel", "JavaScript", "TypeScript", "React.js", "MySQL", "Git", "CSS", "Tailwindcss"],
         experience: [
             {
-                period: "September 2021 - Present",
-                position: "Position",
-                institution: "Company Name"
+                period: "2019 - Today",
+                position: "Full-stack Developer",
+                institution: "DMD SARL"
             },
             {
-                period: "July 2019 - August 2021",
-                position: "Position",
-                institution: "Company Name"
+                period: "July 2019 - September 2019",
+                position: "Full-stack | Internship",
+                institution: "DMD SARL"
             },
         ],
         eduction: [
             {
                 period: "2015 - 2019",
-                position: "-",
-                institution: "Institution Name"
+                position: "Licence 3",
+                institution: "ESGIS"
             },
             {
-                period: "2015 - 2019",
-                position: "-",
-                institution: "Institution Name"
+                period: "2016",
+                position: "12th Grade",
+                institution: "CSS / CED"
             },
         ],
         tryProjects: [

@@ -8,10 +8,11 @@ import {CardTitle} from "./components/utils";
 import Project from "./components/Project";
 import TryProjects from "./components/TryProjects";
 import {useFetchData} from "./hooks";
+import {SkeletonProject} from "./components/SkeletonProject";
 
 const App = () => {
     const {profile} = config;
-    const [data] = useFetchData(`https://api.github.com/search/repositories?q=user:${profile.username}+fork:true&sort=stars&per_page=10&type=Repositories`);
+    const [data, loading] = useFetchData(`https://api.github.com/search/repositories?q=user:${profile.username}+fork:true&sort=stars&per_page=10&type=Repositories`);
 
     return (
         <div className="min-h-screen">
@@ -40,16 +41,25 @@ const App = () => {
                     <div className="shadow-sm border bg-zinc-100 rounded-md p-4">
                         <div className="flex items-center justify-between">
                             <CardTitle>My Projects</CardTitle>
-
-                            <a href={profile.repositories || "#repositories"} target="_blank" rel="noreferrer" className="text-sm text-gray-400">
+                            <a href={ profile?.username ? `https://github.com/${profile?.username}?tab=repositories` : "#repositories" } target="_blank" rel="noreferrer" className="text-sm text-gray-400">
                                 See all
                             </a>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {data?.items.map((item, index) => (
-                                <Project key={index} data={item}/>
-                            ))}
+                            {loading ? (
+                                <>
+                                    {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, index) => (
+                                        <SkeletonProject key={index}/>
+                                    ))}
+                                </>
+                            ) : (
+                                <>
+                                    {data?.items.map((item, index) => (
+                                        <Project key={index} data={item}/>
+                                    ))}
+                                </>
+                            )}
                         </div>
                     </div>
 
