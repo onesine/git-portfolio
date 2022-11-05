@@ -50,7 +50,7 @@ const App = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {loading ? (
                                 <>
-                                    {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, index) => (
+                                    {[0, 1, 2, 3, 4, 5].map((item, index) => (
                                         <SkeletonProject key={index}/>
                                     ))}
                                 </>
