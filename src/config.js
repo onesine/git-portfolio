@@ -4,7 +4,6 @@ import {DevIcon, GithubIcon, LinkedInIcon, MediumIcon, TwitterIcon} from "./comp
 
 const config = {
     profile: {
-        author: "",
         username: "onesine",
         contact: [
             {

@@ -1,70 +1,348 @@
-# Still in development
+# Git Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a portfolio inspired by [GitProfile](https://github.com/arifszn/gitprofile). You can quickly create your portfolio with the template provided. To do this you just need to provide your github username and some configurations.
 
-## Available Scripts
+## Online exemple
 
-In the project directory, you can run:
+#### Light Mode
+<p align="center">
+<img src="https://raw.githubusercontent.com/onesine/react-tailwindcss-select/master/assets/img/Screen_Shot_2022-08-04_at_17.04.09.png" alt="preview react-tailwindcss-select">
+</p>
 
-### `npm start`
+#### Dark Mode
+<p align="center">
+<img src="https://raw.githubusercontent.com/onesine/react-tailwindcss-select/master/assets/img/Screen_Shot_2022-08-04_at_17.04.09.png" alt="preview react-tailwindcss-select">
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To view a live example, [click here](https://git-profile-red.vercel.app/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
+If you want to use git portfolio you can:
+- Forking this repo
+- Setting up locally
 
-### `npm test`
+### Forking this repo
+You just have to get a copy of the repo from this [link](https://github.com/onesine/git-portfolio/fork) and then you can configure with your data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Setting up locally
+To do so, you just have to execute these commands.
+- Get project
+```bash
+git clone https://github.com/onesine/git-portfolio.git
+cd git-portfolio
+```
+- Install dependencies.
+```bash
+npm install
+```
+- Run dev server.
+```bash
+npm run start
+```
 
-### `npm run build`
+If everything goes well so far, you can now proceed to the configuration.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Configuration
+Everything happens in the `config.js` file. Modify it as you like to get the result you want.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```javascript
+{
+    profile: {
+        username: "",
+        contact: [
+            {
+                link: null,
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<MapPinIcon className="h-4 w-4"/>)
+            },
+            {
+                link: null,
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<BuildingOfficeIcon className="h-4 w-4"/>)
+            },
+            {
+                link: "",
+                data: {
+                    text: "=",
+                    value: ""
+                },
+                icon: (<GithubIcon className="h-4 w-4"/>)
+            },
+            {
+                link: "",
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<TwitterIcon className="h-4 w-4"/>)
+            },
+            {
+                link: "",
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<LinkedInIcon className="h-4 w-4"/>)
+            },
+            {
+                link: "",
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<MediumIcon className="h-4 w-4"/>)
+            },
+            {
+                link: "",
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<DevIcon className="h-4 w-4"/>)
+            },
+            {
+                link: null,
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<GlobeAltIcon className="h-4 w-4"/>)
+            },
+            {
+                link: "",
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<EnvelopeIcon className="h-4 w-4"/>)
+            },
+        ],
+        techStack: [],
+        experience: [
+            {
+                period: "",
+                position: "",
+                institution: ""
+            },
+            {
+                period: "",
+                position: "",
+                institution: ""
+            },
+        ],
+        eduction: [
+            {
+                period: "",
+                position: "",
+                institution: ""
+            },
+            {
+                period: "",
+                position: "",
+                institution: ""
+            },
+        ],
+        tryProjects: [
+            {
+                image: "",
+                link: "",
+                title: "",
+                description: "",
+                date: "",
+                techStack: []
+            },
+            {
+                image: "",
+                link: "",
+                title: "",
+                description: "",
+                date: "",
+                techStack: []
+            }
+        ]
+    }
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Avatar, Bio and My Projects
+These data are automatically retrieved via GitHub
 
-### `npm run eject`
+> **Warning**
+>
+> For your CV to be downloadable you must put it in the `public/pdf` folder. The file must have as name your github username.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Contact
+```javascript
+{
+    profile: {
+        // ...
+        contact: [
+            {
+                link: null,
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<MapPinIcon className="h-4 w-4"/>)
+            },
+            {
+                link: null,
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<BuildingOfficeIcon className="h-4 w-4"/>)
+            },
+            {
+                link: "",
+                data: {
+                    text: "=",
+                    value: ""
+                },
+                icon: (<GithubIcon className="h-4 w-4"/>)
+            },
+            {
+                link: "",
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<TwitterIcon className="h-4 w-4"/>)
+            },
+            {
+                link: "",
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<LinkedInIcon className="h-4 w-4"/>)
+            },
+            {
+                link: "",
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<MediumIcon className="h-4 w-4"/>)
+            },
+            {
+                link: "",
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<DevIcon className="h-4 w-4"/>)
+            },
+            {
+                link: null,
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<GlobeAltIcon className="h-4 w-4"/>)
+            },
+            {
+                link: "",
+                data: {
+                    text: "",
+                    value: ""
+                },
+                icon: (<EnvelopeIcon className="h-4 w-4"/>)
+            },
+        ],
+        // ...
+    }
+}
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Experience
+```javascript
+{
+    profile: {
+        // ...
+        experience: [
+            {
+                period: "",
+                position: "",
+                institution: ""
+            },
+            {
+                period: "",
+                position: "",
+                institution: ""
+            },
+        ]
+        // ...
+    }
+}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Education
+```javascript
+{
+    profile: {
+        // ...
+        eduction: [
+            {
+                period: "",
+                position: "",
+                institution: ""
+            },
+            {
+                period: "",
+                position: "",
+                institution: ""
+            },
+        ],
+        // ...
+    }
+}
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### A recent project that can be tested
+```javascript
+{
+    profile: {
+        // ...
+        tryProjects: [
+            {
+                image: "project_1.png",
+                link: "",
+                title: "",
+                description: "",
+                date: "",
+                techStack: []
+            },
+            {
+                image: "project_1.png",
+                link: "",
+                title: "",
+                description: "",
+                date: "",
+                techStack: []
+            }
+        ]
+        // ...
+    }
+}
+```
 
-## Learn More
+> **Warning**
+>
+>To make your project images visible. You must put them in the `public/images` folder.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
+Got ideas on how to make this better? Open an issue!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Thanks
+Thank you, this project would never have seen the light of day without [GitProfile](https://react-select.com/).
+It was a pleasure to be inspired by GitProfile's beautiful interface to realize this project.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+MIT Licensed. Copyright (c) Lewhe Onesine 2022.
