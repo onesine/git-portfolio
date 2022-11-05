@@ -41,7 +41,7 @@ const TryProjects = ({data}) => {
 
                     <div className="text-[0.7rem] flex items-center justify-center md:justify-start flex-wrap">
                         {(data.techStack || []).map((item, index) => (
-                            <span key={index} className={`px-3.5 py-1 ${themeStyle.tag} rounded-full mr-3 mt-2`}>
+                            <span key={index} className={`transition-all duration-300 px-3.5 py-1 ${themeStyle.tag} rounded-full mr-3 mt-2`}>
                                 #{item}
                             </span>
                         ))}
