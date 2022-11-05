@@ -6,12 +6,12 @@ This project is a portfolio inspired by [GitProfile](https://github.com/arifszn/
 
 #### Light Mode
 <p align="center">
-<img src="https://raw.githubusercontent.com/onesine/react-tailwindcss-select/master/assets/img/Screen_Shot_2022-08-04_at_17.04.09.png" alt="preview react-tailwindcss-select">
+<img src="https://raw.githubusercontent.com/onesine/git-portfolio/master/assets/img/light_Screen_Shot_2022-08-04_at_17.04.09.png" alt="preview react-tailwindcss-select">
 </p>
 
 #### Dark Mode
 <p align="center">
-<img src="https://raw.githubusercontent.com/onesine/react-tailwindcss-select/master/assets/img/Screen_Shot_2022-08-04_at_17.04.09.png" alt="preview react-tailwindcss-select">
+<img src="https://raw.githubusercontent.com/onesine/git-portfolio/master/assets/img/dark_Screen_Shot_2022-08-04_at_17.04.09.png" alt="preview react-tailwindcss-select">
 </p>
 
 To view a live example, [click here](https://git-profile-red.vercel.app/).
