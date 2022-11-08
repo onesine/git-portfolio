@@ -1,6 +1,6 @@
 export const languageColors = {
-    TypeScript: "#3178c6",
     JavaScript: "#f1e05a",
+    TypeScript: "#3178c6",
     HTML: "#e34c26",
     Rust: "#dea584",
     Python: "#3572A5",
