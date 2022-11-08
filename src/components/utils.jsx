@@ -85,17 +85,39 @@ export const MergeIcon = ({className = ""}) => {
 };
 
 export const TextSkeleton = ({children}) => {
+    const {theme} = useContext(ThemeContext);
+    const [themeSwitcher, setThemeSwitcher] = useState({
+        color: ""
+    });
+
+    useLayoutEffect(() => {
+        setThemeSwitcher({
+            color: themeConfig[getTheme(theme)].skeleton.color
+        })
+    }, [theme]);
+
     return (
         <div className="animate-pulse my-0 overflow-hidden">
-            <div className="bg-gray-200 my-0 inline-block px-2 rounded text-gray-900/0 text-xs h-3 truncate">{children}</div>
+            <div className={`transition-all duration-300 ${themeSwitcher.color} my-0 inline-block px-2 rounded text-gray-900/0 text-xs h-3 truncate`}>{children}</div>
         </div>
     );
 };
 
 export const ElementSkeleton = ({className = ""}) => {
+    const {theme} = useContext(ThemeContext);
+    const [themeSwitcher, setThemeSwitcher] = useState({
+        color: ""
+    });
+
+    useLayoutEffect(() => {
+        setThemeSwitcher({
+            color: themeConfig[getTheme(theme)].skeleton.color
+        })
+    }, [theme]);
+
     return (
         <div className="animate-pulse">
-            <div className={"bg-gray-200 "+className}/>
+            <div className={`transition-all duration-300 ${themeSwitcher.color} ${className}`}/>
         </div>
     );
 };

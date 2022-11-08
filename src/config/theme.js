@@ -23,6 +23,9 @@ const themeConfig = {
         },
         footer: {
             link: "bg-[#2A303C] border-[#2A303C]"
+        },
+        skeleton: {
+            color: "bg-[#1F242D]"
         }
     },
     Light: {
@@ -49,6 +52,9 @@ const themeConfig = {
         },
         footer: {
             link: "bg-white border-gray-300"
+        },
+        skeleton: {
+            color: "bg-gray-200"
         }
     }
 };
