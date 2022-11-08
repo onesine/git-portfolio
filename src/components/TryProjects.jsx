@@ -6,12 +6,12 @@ import {getTheme} from "../helpers";
 
 const TryProjects = ({data}) => {
     const {theme} = useContext(ThemeContext);
-    const [themeStyle, setThemeStyle] = useState({
+    const [themeSwitcher, setThemeSwitcher] = useState({
         tag: ""
     });
 
     useLayoutEffect(() => {
-        setThemeStyle({
+        setThemeSwitcher({
             tag: themeConfig[getTheme(theme)].tryProjects.tag
         });
     }, [theme]);
@@ -41,7 +41,7 @@ const TryProjects = ({data}) => {
 
                     <div className="text-[0.7rem] flex items-center justify-center md:justify-start flex-wrap">
                         {(data.techStack || []).map((item, index) => (
-                            <span key={index} className={`transition-all duration-300 px-3.5 py-1 ${themeStyle.tag} rounded-full mr-3 mt-2`}>
+                            <span key={index} className={`transition-all duration-300 px-3.5 py-1 ${themeSwitcher.tag} rounded-full mr-3 mt-2`}>
                                 #{item}
                             </span>
                         ))}

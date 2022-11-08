@@ -8,16 +8,9 @@ const themeConfig = {
             button: "text-white",
             buttonHover: "hover:bg-[#2A303C]",
         },
-        cardContainer: {
-            bg: "bg-[#2A303C]"
-        },
-        cardTitle: {
-            color: "text-[#7E8591]"
-        },
-        projectsContainer: {
-            bg: "bg-[#232833]",
-            border: "border border-[#232833]"
-        },
+        cardContainer: "bg-[#2A303C]",
+        cardTitle: "text-[#7E8591]",
+        projectsContainer: "bg-[#232833] border border-[#232833]",
         resume: {
             avatarBorder: "border-indigo-600"
         },
@@ -41,16 +34,9 @@ const themeConfig = {
             button: "text-white",
             buttonHover: "hover:bg-gray-100",
         },
-        cardContainer: {
-            bg: "bg-white"
-        },
-        cardTitle: {
-            color: "text-gray-500"
-        },
-        projectsContainer: {
-            bg: "bg-zinc-100",
-            border: "border border-gray-100"
-        },
+        cardContainer: "bg-white",
+        cardTitle: "text-gray-500",
+        projectsContainer: "bg-zinc-100 border border-gray-100",
         resume: {
             avatarBorder: "border-indigo-600"
         },

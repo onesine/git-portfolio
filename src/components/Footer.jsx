@@ -5,12 +5,12 @@ import {getTheme} from "../helpers";
 
 const Footer = () => {
     const {theme} = useContext(ThemeContext);
-    const [switchTheme, setSwitchTheme] = useState({
+    const [themeSwitcher, setThemeSwitcher] = useState({
         link: ""
     });
 
     useLayoutEffect(() => {
-        setSwitchTheme({
+        setThemeSwitcher({
             link: themeConfig[getTheme(theme)].footer["link"],
         });
     }, [theme]);
@@ -21,7 +21,7 @@ const Footer = () => {
                 href="https://github.com/onesine/git-profile"
                 target="_blank"
                 rel="noreferrer"
-                className={`border ${switchTheme.link} px-4 py-3 text-sm border rounded-md shadow-lg`}
+                className={`border ${themeSwitcher.link} px-4 py-3 text-sm border rounded-md shadow-lg`}
             >
                 Inspired by <span className="text-indigo-600">GitProfile</span> and build with ❤️
             </a>

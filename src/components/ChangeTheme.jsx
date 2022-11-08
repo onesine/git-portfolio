@@ -10,18 +10,22 @@ const ChangeTheme = () => {
     const {theme, themes, changeTheme} = useContext(ThemeContext);
     const ref = useRef();
     const [open, setOpen] = useState(false);
-    const [buttonHover, setButtonHover] = useState("");
-    const [dropStyle, setDropStyle] = useState("");
-    const [itemButton, setItemButton] = useState("");
-    const [itemButtonHover, setItemButtonHover] = useState("");
-    const [primaryColor, setPrimaryColor] = useState("");
+    const [themeSwitcher, setThemeSwitcher] = useState({
+        buttonHover: "",
+        dropStyle: "",
+        itemButton: "",
+        itemButtonHover: "",
+        primaryColor: "",
+    });
 
     useLayoutEffect(() => {
-        setButtonHover(themeConfig[getTheme(theme)].changeThemeButton.hover);
-        setDropStyle(themeConfig[getTheme(theme)].changeThemeButton.dropDown);
-        setItemButton(themeConfig[getTheme(theme)].changeThemeButton.button);
-        setItemButtonHover(themeConfig[getTheme(theme)].changeThemeButton.buttonHover);
-        setPrimaryColor(themeConfig[getTheme(theme)].primaryColor);
+        setThemeSwitcher({
+            buttonHover: themeConfig[getTheme(theme)].changeThemeButton.hover,
+            dropStyle: themeConfig[getTheme(theme)].changeThemeButton.dropDown,
+            itemButton: themeConfig[getTheme(theme)].changeThemeButton.button,
+            itemButtonHover: themeConfig[getTheme(theme)].changeThemeButton.buttonHover,
+            primaryColor: themeConfig[getTheme(theme)].primaryColor,
+        });
     }, [theme]);
 
     useOnClickOutside(ref, () => setOpen(false));
@@ -34,18 +38,18 @@ const ChangeTheme = () => {
             </div>
 
             <div className="inline-block relative" ref={ref}>
-                <button className={`flex items-center transition-all duration-300 p-4 rounded-md ${buttonHover}`} onClick={() => setOpen(!open)}>
+                <button className={`flex items-center transition-all duration-300 p-4 rounded-md ${themeSwitcher.buttonHover}`} onClick={() => setOpen(!open)}>
                     <AdjustmentsVerticalIcon className="h-5 w-5"/>
                     <span className="ml-3 mr-1 font-semibold text-sm hidden md:block">Change Theme</span>
                     <ChevronRightIcon className="h-4 w-4 p-0.5"/>
                 </button>
 
-                <div className={`absolute z-50 w-52 ${dropStyle} shadow-2xl max-h-[25rem] right-0 mt-2 rounded-md p-2 border transition-all duration-300 ${open ? 'block scale-100 opacity-100' : 'hidden opacity-0 scale-75'}`}>
+                <div className={`absolute z-50 w-52 ${themeSwitcher.dropStyle} shadow-2xl max-h-[25rem] right-0 mt-2 rounded-md p-2 border transition-all duration-300 ${open ? 'block scale-100 opacity-100' : 'hidden opacity-0 scale-75'}`}>
                     {themes.map((item, index) => (
                         <div
                             key={index}
                             onClick={() => {changeTheme(item)}}
-                            className={`transition-all duration-300 px-4 py-2 rounded-md cursor-pointer text-sm ${theme === item ? `${itemButton} ${primaryColor}` : `${itemButtonHover}`}`}
+                            className={`transition-all duration-300 px-4 py-2 rounded-md cursor-pointer text-sm ${theme === item ? `${themeSwitcher.itemButton} ${themeSwitcher.primaryColor}` : `${themeSwitcher.itemButtonHover}`}`}
                         >
                             {item}
                         </div>

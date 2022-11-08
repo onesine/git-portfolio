@@ -8,7 +8,7 @@ import {ThemeContext} from "./Theme";
 
 const Resume = () => {
     const {theme} = useContext(ThemeContext);
-    const [switchTheme, setSwitchTheme] = useState({
+    const [themeSwitcher, setThemeSwitcher] = useState({
         avatarBorder: ""
     });
 
@@ -17,7 +17,7 @@ const Resume = () => {
     const [data, loading] = useFetchData(`https://api.github.com/users/${profile.username}`);
 
     useLayoutEffect(() => {
-        setSwitchTheme({
+        setThemeSwitcher({
             avatarBorder: themeConfig[getTheme(theme)].resume.avatarBorder,
         });
     }, [theme]);
@@ -27,7 +27,7 @@ const Resume = () => {
             {loading ? (
                 <ElementSkeleton className="h-36 rounded-full w-36"/>
             ) : (
-                <div className={`transition-all duration-300 h-36 w-36 p-0.5 border-[3px] ${switchTheme.avatarBorder} rounded-full`}>
+                <div className={`transition-all duration-300 h-36 w-36 p-0.5 border-[3px] ${themeSwitcher.avatarBorder} rounded-full`}>
                     {data && data?.avatar_url ? (
                         <img
                             className="h-full rounded-full object-center object-cover"

@@ -6,13 +6,13 @@ import {ThemeContext} from "./Theme";
 
 const Experience = ({title, data}) => {
     const {theme} = useContext(ThemeContext);
-    const [themeStyle, setThemeStyle] = useState({
+    const [themeSwitcher, setThemeSwitcher] = useState({
         timeLine: "",
         dot: ""
     });
 
     useLayoutEffect(() => {
-        setThemeStyle({
+        setThemeSwitcher({
             timeLine: themeConfig[getTheme(theme)].experience.timeLine,
             dot: themeConfig[getTheme(theme)].experience.dot,
         });
@@ -22,10 +22,10 @@ const Experience = ({title, data}) => {
         <CardContainer className="p-7">
             <CardTitle>{title}</CardTitle>
 
-            <div className={`space-y-4 border-l ${themeStyle.timeLine} pl-4`}>
+            <div className={`space-y-4 border-l ${themeSwitcher.timeLine} pl-4`}>
                 {data.map((item, index) => (
                     <div key={index} className="flex space-x-3">
-                        <span className={`inline-block rounded-full h-2 w-2 ${themeStyle.dot} mt-1 ml-[-1.28rem]`}/>
+                        <span className={`inline-block rounded-full h-2 w-2 ${themeSwitcher.dot} mt-1 ml-[-1.28rem]`}/>
 
                         <div>
                             <p className="text-xs">{item.period}</p>

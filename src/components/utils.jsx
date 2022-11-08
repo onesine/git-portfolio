@@ -5,15 +5,15 @@ import {getTheme} from "../helpers";
 
 export const CardContainer = ({children, className = ""}) => {
     const {theme} = useContext(ThemeContext);
-    const [bg, setBg] = useState("");
+    const [themeSwitcher, setThemeSwitcher] = useState("");
 
     useLayoutEffect(() => {
-        setBg(themeConfig[getTheme(theme)].cardContainer.bg);
+        setThemeSwitcher(themeConfig[getTheme(theme)].cardContainer);
     }, [theme]);
 
     return (
         <div
-            className={`transition-all duration-300 ${bg} rounded-md shadow-lg${className.length ? " "+className : ""}`}
+            className={`transition-all duration-300 ${themeSwitcher} rounded-md shadow-lg${className.length ? " "+className : ""}`}
         >
             {children}
         </div>
@@ -22,29 +22,27 @@ export const CardContainer = ({children, className = ""}) => {
 
 export const CardTitle = ({children}) => {
     const {theme} = useContext(ThemeContext);
-    const [color, setColor] = useState("");
+    const [themeSwitcher, setThemeSwitcher] = useState("");
 
     useLayoutEffect(() => {
-        setColor(themeConfig[getTheme(theme)].cardTitle.color);
+        setThemeSwitcher(themeConfig[getTheme(theme)].cardTitle);
     }, [theme]);
 
     return (
-        <h2 className={`transition-all duration-300 mb-6 text-xl ${color} font-semibold`}>{children}</h2>
+        <h2 className={`transition-all duration-300 mb-6 text-xl ${themeSwitcher} font-semibold`}>{children}</h2>
     );
 };
 
 export const ProjectsContainer = ({children}) => {
     const {theme} = useContext(ThemeContext);
-    const [bg, setBg] = useState("");
-    const [border, setBorder] = useState("");
+    const [themeSwitcher, setThemeSwitcher] = useState("");
 
     useLayoutEffect(() => {
-        setBg(themeConfig[getTheme(theme)].projectsContainer.bg);
-        setBorder(themeConfig[getTheme(theme)].projectsContainer.border);
+        setThemeSwitcher(themeConfig[getTheme(theme)].projectsContainer);
     }, [theme]);
 
     return (
-        <div className={`transition-all duration-300 shadow-sm ${border} ${bg} rounded-md p-4`}>
+        <div className={`transition-all duration-300 shadow-sm ${themeSwitcher} rounded-md p-4`}>
             {children}
         </div>
     );
