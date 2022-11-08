@@ -1,7 +1,7 @@
 import {createContext, useLayoutEffect, useMemo, useState} from "react";
 import {themes} from "../constants";
 import themeConfig from "../config/theme";
-import {getTheme} from "../helpers";
+import {getDefaultTheme, getTheme} from "../helpers";
 
 export const ThemeContext = createContext({
     theme: "Default",
@@ -10,7 +10,7 @@ export const ThemeContext = createContext({
 });
 
 const Theme = ({children}) => {
-    const [theme, setTheme] = useState(localStorage.getItem("git-portfolio-theme") || themes[0]);
+    const [theme, setTheme] = useState(localStorage.getItem("git-portfolio-theme") || getDefaultTheme());
 
     useLayoutEffect(() => {
         document.body.className = themeConfig[getTheme(theme)]["body"];

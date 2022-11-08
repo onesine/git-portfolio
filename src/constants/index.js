@@ -17,3 +17,6 @@ export const themes = [
     "Light",
     "Dark"
 ];
+
+export const LIGHT = themes[1];
+export const DARK = themes[2];
