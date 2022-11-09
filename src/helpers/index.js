@@ -11,7 +11,7 @@ export function getTheme(theme) {
 export function getDefaultTheme() {
     const hour = new Date().getHours();
 
-    if (hour > 5 && hour < 20) {
+    if (hour > 5 && hour < 18) {
         return LIGHT;
     }
     return DARK;
