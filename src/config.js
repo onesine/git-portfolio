@@ -1,6 +1,7 @@
 import {MapPinIcon} from "@heroicons/react/24/solid";
 import {BuildingOfficeIcon, EnvelopeIcon, GlobeAltIcon} from "@heroicons/react/20/solid";
 import {DevIcon, GithubIcon, LinkedInIcon, MediumIcon, TwitterIcon} from "./components/utils";
+import moment from "moment";
 
 const config = {
     profile: {
@@ -114,11 +115,19 @@ const config = {
                 techStack: ["HTML", "JavaScript", "React", "Bootstrap 4"]
             },
             {
+                image: "react-tailwindcss-datepicker.png",
+                link: "https://react-tailwindcss-datepicker.vercel.app/",
+                title: "React Tailwindcss Datepicker",
+                description: "Modern date range picker component for React using Tailwind 3 and dayjs. Alternative to Litepie Datepicker.",
+                date: moment(new Date("2022-11-18"), "YYYYMMDD").fromNow(),
+                techStack: ["JavaScript", "TypeScript", "React", "Next", "Tailwindcss"]
+            },
+            {
                 image: "git-profile.png",
                 link: "https://git-profile-red.vercel.app/",
                 title: "Git Profile",
                 description: "This project presents some data from my GitHub and some project you can try.",
-                date: "1 days ago",
+                date: moment(new Date("2022-11-03"), "YYYYMMDD").fromNow(),
                 techStack: ["JavaScript", "React", "HTML", "Tailwindcss"]
             },
             {
@@ -126,7 +135,7 @@ const config = {
                 link: "https://react-nested-accordion.vercel.app/",
                 title: "Example usage react-headless-accordion",
                 description: "This project presents some use cases of my react-headless-accordion package.",
-                date: "5 days ago",
+                date: moment(new Date("2022-10-17"), "YYYYMMDD").fromNow(),
                 techStack: ["JavaScript", "React", "HTML", "Tailwindcss"]
             },
             {
@@ -134,7 +143,7 @@ const config = {
                 link: "https://demo-react-tailwindcss-select.vercel.app/",
                 title: "Demo of react-tailwindcss-select",
                 description: "This project allows you to test the different options available in my react-tailwindcss-select package.",
-                date: "3 months ago",
+                date: moment(new Date("2022-07-13"), "YYYYMMDD").fromNow(),
                 techStack: ["JavaScript", "React", "HTML", "Tailwindcss"]
             },
             {
@@ -142,7 +151,7 @@ const config = {
                 link: "https://backoffice.satis-universe.com/",
                 title: "Satis backoffice",
                 description: "This project is a client survey application for microfinance institutions..",
-                date: "5 months ago",
+                date: moment(new Date("2022-04-13"), "YYYYMMDD").fromNow(),
                 techStack: ["HTML", "JavaScript", "React", "PHP", "Laravel", "Tailwindcss"]
             },
         ]
