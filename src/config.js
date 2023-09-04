@@ -19,7 +19,7 @@ const config = {
                 link: "https://www.dmdsatis.com/",
                 data: {
                     text: "Company",
-                    value: "DMD"
+                    value: "Paydunya"
                 },
                 icon: (<BuildingOfficeIcon className="h-4 w-4"/>)
             },
@@ -107,11 +107,27 @@ const config = {
         ],
         tryProjects: [
             {
+                image: "cryptocowrie-app.png",
+                link: "https://app.cryptocowries.io/login",
+                title: "CryptoCowries app",
+                description: "This project is primarily an app for buying, depositing and withdrawing crypto-currencies.",
+                date: "Still in development",
+                techStack: ["HTML", "CSS", "Typescript", "Tailwind", "React"]
+            },
+            {
+                image: "atompay-app.png",
+                link: "https://test-paydunya-atompay.vercel.app/",
+                title: "Atompay app",
+                description: "It's an application for transferring money as part of a challenge. All data used in this application is false.",
+                date: moment(new Date("2023-02-21"), "YYYYMMDD").fromNow(),
+                techStack: ["HTML", "JavaScript", "React", "Tailwind"]
+            },
+            {
                 image: "inventor-app.png",
                 link: "http://45.134.226.100/",
                 title: "Inventor app",
                 description: "This project is a property management application for businesses.",
-                date: "Still in development",
+                date: moment(new Date("2022-12-13"), "YYYYMMDD").fromNow(),
                 techStack: ["HTML", "JavaScript", "React", "Bootstrap 4"]
             },
             {
