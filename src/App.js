@@ -65,7 +65,7 @@ const App = () => {
                     </ProjectsContainer>
 
                     <ProjectsContainer>
-                        <CardTitle>A recent project that can be tested</CardTitle>
+                        <CardTitle>Todo - Always</CardTitle>
 
                         <div className="space-y-6">
                             {profile.tryProjects.map((item, index) => (

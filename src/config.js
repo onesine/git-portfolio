@@ -1,112 +1,81 @@
 import {MapPinIcon} from "@heroicons/react/24/solid";
 import {BuildingOfficeIcon, EnvelopeIcon, GlobeAltIcon} from "@heroicons/react/20/solid";
-import {DevIcon, GithubIcon, LinkedInIcon, MediumIcon, TwitterIcon} from "./components/utils";
+import {GithubIcon, LinkedInIcon} from "./components/utils";
 import moment from "moment";
 
 const config = {
     profile: {
-        username: "onesine",
+        username: "passadis",
         contact: [
             {
                 link: null,
                 data: {
                     text: "Based in",
-                    value: "Bénin"
+                    value: "Athens"
                 },
                 icon: (<MapPinIcon className="h-4 w-4"/>)
             },
             {
-                link: "https://www.dmdsatis.com/",
+                link: "https://www.unisystems.gr/",
                 data: {
                     text: "Company",
-                    value: "Paydunya"
+                    value: "Unisystems"
                 },
                 icon: (<BuildingOfficeIcon className="h-4 w-4"/>)
             },
             {
-                link: "https://github.com/onesine",
+                link: "https://github.com/passadis",
                 data: {
                     text: "GitHub",
-                    value: "onesine"
+                    value: "passadis"
                 },
                 icon: (<GithubIcon className="h-4 w-4"/>)
             },
+            
             {
-                link: "https://twitter.com/LewheO",
-                data: {
-                    text: "Twitter",
-                    value: "g2ek"
-                },
-                icon: (<TwitterIcon className="h-4 w-4"/>)
-            },
-            {
-                link: "https://www.linkedin.com/in/onesine-lewhe-63109a171/",
+                link: "https://www.linkedin.com/in/kpassad/",
                 data: {
                     text: "LinkedIn",
-                    value: "Onesine Lewhe"
+                    value: "Konstantinos Passadis"
                 },
                 icon: (<LinkedInIcon className="h-4 w-4"/>)
             },
-            {
-                link: "https://medium.com/@philemonlewhe",
-                data: {
-                    text: "Medium",
-                    value: "onesine"
-                },
-                icon: (<MediumIcon className="h-4 w-4"/>)
-            },
-            {
-                link: "https://dev.to/onesine",
-                data: {
-                    text: "Dev",
-                    value: "onesine"
-                },
-                icon: (<DevIcon className="h-4 w-4"/>)
-            },
+
             {
                 link: null,
                 data: {
                     text: "Website",
-                    value: "https://onesine.github.io"
+                    value: "https://cloudblogger.eu"
                 },
                 icon: (<GlobeAltIcon className="h-4 w-4"/>)
             },
             {
-                link: "mailto:lewheonesine@gmail.com",
+                link: "mailto:passadis@outlook.com",
                 data: {
                     text: "Email",
-                    value: "lewheonesine@gmail.com"
+                    value: "passadis@outlook.com"
                 },
                 icon: (<EnvelopeIcon className="h-4 w-4"/>)
             },
         ],
-        techStack: ["PHP", "Laravel", "JavaScript", "TypeScript", "React.js", "MySQL", "Git", "CSS", "Tailwindcss"],
+        techStack: ["Azure", "Kubernetes", "NodeJS", "React.js", "SQL", "Git", "CSS", "Python"],
         experience: [
             {
-                period: "2019 - Today",
-                position: "Full-stack Developer",
-                institution: "DMD SARL"
-            },
-            {
-                period: "July 2019 - September 2019",
-                position: "Full-stack Developer | Internship",
-                institution: "DMD SARL"
+                period: "2000 - Today",
+                position: "IT Professional",
+                institution: ""
             },
         ],
         eduction: [
             {
-                period: "2015 - 2019",
-                position: "Licence 3",
-                institution: "ESGIS"
+                period: "1977 - Today",
+                position: "Learner",
+                institution: "Life"
             },
-            {
-                period: "2016",
-                position: "12th Grade",
-                institution: "CSS / CED"
-            },
+
         ],
         tryProjects: [
-            {
+            /*{
                 image: "cryptocowrie-app.png",
                 link: "https://app.cryptocowries.io/login",
                 title: "CryptoCowries app",
@@ -169,7 +138,7 @@ const config = {
                 description: "This project is a client survey application for microfinance institutions..",
                 date: moment(new Date("2022-04-13"), "YYYYMMDD").fromNow(),
                 techStack: ["HTML", "JavaScript", "React", "PHP", "Laravel", "Tailwindcss"]
-            },
+            },*/
         ]
     }
 };
