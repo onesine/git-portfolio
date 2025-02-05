@@ -1,12 +1,12 @@
 const themeConfig = {
-    Dark: {
+    dark: {
         primaryColor: "bg-indigo-600",
         body: "transition-all duration-300 antialiased bg-[#1F242D] text-[#747B88]",
         changeThemeButton: {
             hover: "hover:bg-[#343A46]",
             dropDown: "bg-[#242933] border-[#242933]",
             button: "text-white",
-            buttonHover: "hover:bg-[#2A303C]",
+            buttonHover: "hover:bg-[#2A303C]"
         },
         cardContainer: "bg-[#2A303C]",
         cardTitle: "text-[#7E8591]",
@@ -28,14 +28,14 @@ const themeConfig = {
             color: "bg-[#1F242D]"
         }
     },
-    Light: {
+    light: {
         primaryColor: "bg-indigo-600",
         body: "transition-all duration-300 antialiased bg-zinc-200 text-[#797E87]",
         changeThemeButton: {
             hover: "hover:bg-gray-200",
             dropDown: "bg-white border-gray-200/60",
             button: "text-white",
-            buttonHover: "hover:bg-gray-100",
+            buttonHover: "hover:bg-gray-100"
         },
         cardContainer: "bg-white",
         cardTitle: "text-gray-500",

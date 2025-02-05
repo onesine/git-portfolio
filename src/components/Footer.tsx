@@ -1,17 +1,17 @@
-import {useContext, useLayoutEffect, useState} from "react";
-import {ThemeContext} from "./Theme";
-import themeConfig from "../config/theme";
-import {getTheme} from "../helpers";
+import { useContext, useLayoutEffect, useState } from "react";
+
+import themeConfig from "@/config/theme.ts";
+import { ThemeContext } from "@/contexts/themeContext.ts";
 
 const Footer = () => {
-    const {theme} = useContext(ThemeContext);
+    const { theme } = useContext(ThemeContext);
     const [themeSwitcher, setThemeSwitcher] = useState({
         link: ""
     });
 
     useLayoutEffect(() => {
         setThemeSwitcher({
-            link: themeConfig[getTheme(theme)].footer["link"],
+            link: themeConfig[theme].footer["link"]
         });
     }, [theme]);
 

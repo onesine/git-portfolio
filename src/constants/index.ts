@@ -1,4 +1,4 @@
-export const languageColors = {
+export const LANGUAGE_COLORS = {
     JavaScript: "#f1e05a",
     TypeScript: "#3178c6",
     HTML: "#e34c26",
@@ -12,11 +12,7 @@ export const languageColors = {
     PHP: "#4F5D95"
 };
 
-export const themes = [
-    "Default",
-    "Light",
-    "Dark"
-];
+export const THEMES: Array<"light" | "dark"> = ["light", "dark"];
 
-export const LIGHT = themes[1];
-export const DARK = themes[2];
+export const LIGHT = THEMES[1] as "light";
+export const DARK = THEMES[2] as "dark";

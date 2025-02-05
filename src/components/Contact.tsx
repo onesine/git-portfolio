@@ -1,13 +1,19 @@
-import {CardContainer} from "./utils";
-import config from "../config";
+import configs from "@/config";
+import { CardContainer } from "@/hooks/utils.tsx";
 
 const Contact = () => {
-    const {profile} = config;
+    const { profile } = configs;
 
     return (
         <CardContainer className="p-7 text-gray-500 text-sm space-y-5">
             {profile.contact.map((item, index) => (
-                <a key={index} href={item.link ? item.link : `#${item?.data?.text}`} target="_blank" rel="noreferrer" className="flex items-center justify-between">
+                <a
+                    key={index}
+                    href={item.link ? item.link : `#${item?.data?.text}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center justify-between"
+                >
                     <div className="flex items-center space-x-3">
                         {item.icon}
                         <span className="font-medium">{item?.data?.text}:</span>
