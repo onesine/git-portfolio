@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#000000" />
+        <title>Lewhe Onesine</title>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="module" src="/src/main.tsx"></script>
+        <script>
+            function loadDefaultTheme() {
+                const userTheme = localStorage.getItem("git-portfolio-theme");
+                const bodyTheme = {
+                    Dark: "antialiased bg-[#1F242D] text-[#747B88]",
+                    Light: "antialiased bg-zinc-200 text-[#797E87]"
+                };
+
+                if (userTheme) {
+                    document.body.className = bodyTheme[userTheme];
+                } else {
+                    const hour = new Date().getHours();
+
+                    if (hour > 5 && hour < 18) {
+                        document.body.className = bodyTheme["Light"];
+                    } else {
+                        document.body.className = bodyTheme["Dark"];
+                    }
+                }
+            }
+
+            loadDefaultTheme();
+        </script>
+    </body>
+</html>
