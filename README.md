@@ -43,7 +43,7 @@ npm run start
 If everything goes well so far, you can now proceed to the configuration.
 
 ## Configuration
-Everything happens in the `config.js` file. Modify it as you like to get the result you want.
+Everything happens in the `src/config/index.tsx` file. Modify it as you like to get the result you want.
 
 ```javascript
 {
