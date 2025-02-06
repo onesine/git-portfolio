@@ -15,7 +15,8 @@ const themeConfig = {
             avatarBorder: "border-indigo-600"
         },
         tryProjects: {
-            tag: "bg-[#252A35]"
+            tag: "bg-[#252A35]",
+            links: "text-indigo-500"
         },
         experience: {
             timeLine: "border-[#272D37]",
@@ -44,7 +45,8 @@ const themeConfig = {
             avatarBorder: "border-indigo-600"
         },
         tryProjects: {
-            tag: "bg-gray-100"
+            tag: "bg-gray-100",
+            links: "text-indigo-600"
         },
         experience: {
             timeLine: "border-gray-100",

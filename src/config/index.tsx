@@ -106,7 +106,7 @@ const configs = {
                 institution: "Freelance"
             },
             {
-                period: "January 2023 - March 2024",
+                period: "January 2023 - March 2023",
                 position: "Front-end developer services",
                 institution: "FASFOX"
             },
@@ -130,13 +130,54 @@ const configs = {
         ],
         tryProjects: [
             {
+                image: "MyDunya.png",
+                link: "https://mydunya.com/",
+                links: [
+                    {
+                        title: "MyDunya on Play Store",
+                        link: "https://play.google.com/store/apps/details?id=com.paydunya.mydunya_live_2&hl=fr"
+                    },
+                    {
+                        title: "MyDunya on Apple Store",
+                        link: "https://apps.apple.com/fr/app/mydunya/id6475684818"
+                    },
+                    {
+                        title: "MyDunya on Web",
+                        link: "https://mydunya.com/"
+                    }
+                ],
+                title: "MyDunya",
+                description:
+                    "Development of the MyDunya platform, a wallet-to-wallet and card-to-wallet money transfer application. I worked as a front-end developer on the web application (PWA), mobile application and administration dashboard.",
+                date: "Still in development",
+                techStack: [
+                    "HTML",
+                    "CSS",
+                    "Typescript",
+                    "Tailwind",
+                    "React",
+                    "Redux",
+                    "React Native",
+                    "PWA"
+                ]
+            },
+            {
                 image: "cryptocowrie-app.png",
                 link: "https://app.cryptocowries.io/login",
                 title: "CryptoCowries app",
                 description:
                     "This project is primarily an app for buying, depositing and withdrawing crypto-currencies.",
-                date: "Still in development",
-                techStack: ["HTML", "CSS", "Typescript", "Tailwind", "React"]
+                date: dateTimeFormNow(new Date("2024-04-16")),
+                techStack: ["HTML", "CSS", "Typescript", "Tailwind", "React", "Redux"]
+            },
+            {
+                image: "react-tailwindcss-datepicker.png",
+                link: "https://react-tailwindcss-datepicker.vercel.app/",
+                title: "React Tailwindcss Datepicker",
+                description:
+                    "Modern date range picker component for React using Tailwind 3 and dayjs. Alternative to Litepie Datepicker.",
+                date: dateTimeFormNow(new Date("2022-11-18")),
+                techStack: ["JavaScript", "TypeScript", "React", "Next", "Tailwindcss"]
             },
             {
                 image: "atompay-app.png",
@@ -149,20 +190,11 @@ const configs = {
             },
             {
                 image: "inventor-app.png",
-                link: "http://45.134.226.100/",
+                link: "#",
                 title: "Inventor app",
                 description: "This project is a property management application for businesses.",
                 date: dateTimeFormNow(new Date("2022-12-13")),
                 techStack: ["HTML", "JavaScript", "React", "Bootstrap 4"]
-            },
-            {
-                image: "react-tailwindcss-datepicker.png",
-                link: "https://react-tailwindcss-datepicker.vercel.app/",
-                title: "React Tailwindcss Datepicker",
-                description:
-                    "Modern date range picker component for React using Tailwind 3 and dayjs. Alternative to Litepie Datepicker.",
-                date: dateTimeFormNow(new Date("2022-11-18")),
-                techStack: ["JavaScript", "TypeScript", "React", "Next", "Tailwindcss"]
             },
             {
                 image: "git-profile.png",
@@ -193,7 +225,7 @@ const configs = {
             },
             {
                 image: "satis-backoffice.png",
-                link: "https://backoffice.satis-universe.com/",
+                link: "#",
                 title: "Satis backoffice",
                 description:
                     "This project is a client survey application for microfinance institutions..",
