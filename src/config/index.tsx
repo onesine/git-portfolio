@@ -16,7 +16,7 @@ const configs = {
                 icon: <MapPin className="h-4 w-4" />
             },
             {
-                link: "https://www.dmdsatis.com/",
+                link: "https://paydunya.com/",
                 data: {
                     text: "Company",
                     value: "Paydunya"
@@ -86,6 +86,9 @@ const configs = {
             "JavaScript",
             "TypeScript",
             "React.js",
+            "Next.js",
+            "Node.js",
+            "Adonis.js",
             "MySQL",
             "Git",
             "CSS",
@@ -93,13 +96,23 @@ const configs = {
         ],
         experience: [
             {
-                period: "2019 - Today",
-                position: "Full-stack Developer",
-                institution: "DMD SARL"
+                period: "April 2023 - Present",
+                position: "Front-end & Mobile Developer",
+                institution: "Paydunya | MyDunya"
             },
             {
-                period: "July 2019 - September 2019",
-                position: "Full-stack Developer | Internship",
+                period: "September 2023 - April 2024",
+                position: "Front-end Developer",
+                institution: "Freelance"
+            },
+            {
+                period: "January 2023 - March 2024",
+                position: "Front-end developer services",
+                institution: "FASFOX"
+            },
+            {
+                period: "February 2019 - December 2022",
+                position: "Full-stack Developer",
                 institution: "DMD SARL"
             }
         ],
