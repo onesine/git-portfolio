@@ -1,6 +1,5 @@
-import { Contact } from "lucide-react";
-
 import ChangeTheme from "@/components/ChangeTheme.tsx";
+import Contact from "@/components/Contact.tsx";
 import Experience from "@/components/Experience.tsx";
 import Footer from "@/components/Footer.tsx";
 import Project from "@/components/Project.tsx";
